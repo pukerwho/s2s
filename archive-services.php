@@ -8,6 +8,7 @@
 				$services_query = new WP_Query(array(
 					'post_type' => 'services',
 					'posts_per_page' => -1,
+					'orderby' => 'menu_order',
 				)); 
 				if ($services_query->have_posts()) : while ($services_query->have_posts()) : $services_query->the_post(); 
 			?>

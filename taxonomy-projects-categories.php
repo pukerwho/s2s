@@ -20,6 +20,7 @@
 				$query = new WP_Query( array( 
 					'post_type' => 'projects', 
 					'posts_per_page' => -1,
+					'orderby' => 'menu_order',
 					'order'    => 'DESC',
 					'tax_query' => array(
 				    array(

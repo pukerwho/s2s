@@ -5,26 +5,26 @@ use Carbon_Fields\Field;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
-  Container::make( 'theme_options', 'Options' )
-    ->add_tab( __('Common'), array(
-        
-    ) )
-    ->add_tab( __('Шапка'), array(
-        Field::make( 'text', 'crb_header_top_text', 'Текст перед номером телефона' ),
-        Field::make( 'text', 'crb_header_top_phone', 'Номер телефона' ),
-        Field::make( 'image', 'crb_header_logo', 'Логотип' )->set_value_type( 'url'),
-    ) )
-    ->add_tab( __('Блок О НАС'), array(
-        Field::make( 'rich_text', 'crb_aboutus_text', 'Текст О НАС' ),
-    ) )
+  Container::make( 'theme_options', __('Главные настройки') )
     ->add_tab( __('Контакты'), array(
-        Field::make( 'complex', 'crb_contacts', __( 'Контактная информация' ) )
-            ->set_layout( 'tabbed-horizontal')
-            ->add_fields( array(
-                Field::make( 'text', 'crb_contacts_office', __('Офис') ),
-                Field::make( 'text', 'crb_contacts_phone', __('Номер телефона') ),
-                Field::make( 'text', 'crb_contacts_name', __('Имя') ),
+        Field::make( 'complex', 'crb_contact_phones', 'Телефоны' )
+          ->add_fields( array(
+            Field::make( 'text', 'crb_contact_phone', 'Номер' ),
+            Field::make( 'checkbox', 'crb_contact_phone_telegram', 'Telegram' ),
+            Field::make( 'text', 'crb_contact_phone_telegram_number', 'Telegram nickname' )
+             ->set_conditional_logic( array(
+              array(
+                'field' => 'crb_contact_phone_telegram',
+                'value' => true,
+              )
+            ) ),
+            Field::make( 'checkbox', 'crb_contact_phone_whatsapp', 'Whatsapp' ),
+            Field::make( 'checkbox', 'crb_contact_phone_viber', 'Viber' ),
         ) ),
+        Field::make( 'text', 'crb_contact_email', 'Email' ),
+        Field::make( 'text', 'crb_contact_skype', 'Skype' ),  
+        Field::make( 'text', 'crb_contact_instagram', 'Instagram' ),
+        Field::make( 'text', 'crb_contact_facebook', 'Facebook' ),
     ) );
 }
 

@@ -13,7 +13,7 @@ Template Name: ПОРТФОЛИО страница
 		<div>
 			<h1 class="text-2xl lg:text-5xl text-center uppercase mb-10"><?php _e('Портфолио', 's2s'); ?></h1>
 		</div>
-		<div class="w-full lg:w-3/4 flex justify-center mx-auto">
+		<div class="w-full lg:w-3/4 flex justify-center mx-auto px-10">
 			<div class="w-full lg:w-1/2 bg-white shadow-lg mr-0 lg:mr-10 mb-6">
 				<div class="main-bg text-2xl uppercase text-center py-4 px-2">
 					<?php _e('Архитектура', 's2s'); ?>
@@ -32,6 +32,8 @@ Template Name: ПОРТФОЛИО страница
 								</div>
 							<?php endforeach; ?>
 						</div>
+						<div class="swiper-architect-next swiper-button-next"></div>
+						<div class="swiper-architect-prev swiper-button-prev"></div>
 					</div>
 				</div>
 			</div>	
@@ -53,6 +55,8 @@ Template Name: ПОРТФОЛИО страница
 								</div>
 							<?php endforeach; ?>
 						</div>
+						<div class="swiper-design-next swiper-button-next"></div>
+						<div class="swiper-design-prev swiper-button-prev"></div>
 					</div>
 				</div>
 			</div>	
@@ -62,7 +66,7 @@ Template Name: ПОРТФОЛИО страница
 				<div class="main-bg text-2xl uppercase text-center py-4 px-2">
 					<?php _e('Мы на объекте', 's2s'); ?>
 				</div>
-				<div class="portfolio_photos px-6">
+				<div class="portfolio_photos bg-white px-6">
 					<div class="swiper-container swiper-container-object overflow-hidden">
 						<div class="swiper-wrapper">
 							<?php
@@ -76,6 +80,8 @@ Template Name: ПОРТФОЛИО страница
 								</div>
 							<?php endforeach; ?>
 						</div>
+						<div class="swiper-object-next swiper-button-next"></div>
+						<div class="swiper-object-prev swiper-button-prev"></div>
 					</div>
 				</div>
 			</div>

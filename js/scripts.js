@@ -120,7 +120,10 @@ var swiperPortfolioArchitect = function() {
     autoplay: {
       delay: 5000,
     },
-    
+    navigation: {
+      nextEl: '.swiper-architect-next',
+      prevEl: '.swiper-architect-prev',
+    },
   })
 }
 
@@ -138,7 +141,10 @@ var swiperPortfolioDesign = function() {
     autoplay: {
       delay: 6000,
     },
-    
+    navigation: {
+      nextEl: '.swiper-design-next',
+      prevEl: '.swiper-design-prev',
+    },
   })
 }
 
@@ -156,7 +162,10 @@ var swiperPortfolioObject = function() {
     autoplay: {
       delay: 4500,
     },
-    
+    navigation: {
+      nextEl: '.swiper-object-next',
+      prevEl: '.swiper-object-prev',
+    },
   })
 }
 
