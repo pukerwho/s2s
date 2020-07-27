@@ -38,9 +38,6 @@
 						<?php _e('Добавлено', 's2s'); ?>: <?php echo get_the_modified_time('j/n/Y') ?>
 					</div>
 				</div>
-				<div class="post_item_thumb mb-6">
-					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="<?php the_title(); ?>" class="w-full">
-				</div>
 				<div class="post_item_content">
 					<?php the_content(); ?>
 				</div>

@@ -16,7 +16,7 @@
 				$posts_query = new WP_Query( array(
 					'post_type' => 'post',
 					'orderby' => 'date',
-					'post_per_page' => 1,
+					'post_per_page' => 10,
 					'paged' => $current_page,
 				));
 				if ($posts_query->have_posts()) : while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
