@@ -63988,6 +63988,14 @@ button[type="submit"] {
           margin-top: 1rem;
           padding: 0.75rem; } }
   .modal_block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background-color: #ffffff;
     background-size: 400%;
     background-position: 10%; }

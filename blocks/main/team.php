@@ -15,7 +15,7 @@
 			));
 			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 				<div class="team_item w-full lg:w-1/4 px-0 lg:px-4 mb-10 animate-s2s">
-					<a href="#">
+					<a href="<?php echo get_page_url( 'tpl_about' ); ?>">
 						<div class="team_item_photo mb-6">
 							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>">
 						</div>
