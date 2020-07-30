@@ -4,17 +4,21 @@
 
 <div class="service">
 	<div class="thumb" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>); background-attachment: fixed; background-position: bottom; ">
+		<div class="thumb_title animate-s2s">
+			<h1 class="text-2xl lg:text-4xl text-center uppercase">
+				<?php the_title(); ?>
+			</h1>
+		</div>
 	</div>
 	<div class="bg-gray-200 ">
-		<div class="container mx-auto py-20">
+		<div class="container mx-auto pt-10 pb-20 px-4 lg:px-0">
 			<div class="w-full lg:w-3/4 mx-auto">
-				<h1 class="text-5xl text-center uppercase mb-12"><?php the_title(); ?></h1>
 				<div class="service_content mb-12">
 					<?php the_content(); ?>
 				</div>
 			</div>
-			<div class="flex">
-				<div class="service_album w-full lg:w-1/3 pr-10">
+			<div class="flex flex-col lg:flex-row">
+				<div class="service_album w-full lg:w-1/3 pr-0 lg:pr-10 mb-10 lg:mb-0">
 					<div class="service_album_title text-4xl uppercase font-bold mb-8">
 						<div><?php _e('Фотоальбом', 's2s'); ?>:</div>
 					</div>
@@ -31,7 +35,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="service_sostav w-full lg:w-2/3 pl-10">
+				<div class="service_sostav w-full lg:w-2/3 pl-0 lg:pl-10">
 					<div class="service_sostav_title text-4xl uppercase font-bold mb-8">
 						<?php _e('Состав', 's2s'); ?>:
 					</div>

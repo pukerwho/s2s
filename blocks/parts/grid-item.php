@@ -9,10 +9,16 @@
 					<?php the_title(); ?>
 				</div>
 				<div class="grid-item-category relative main-color">
-					Категория
+					<?php 
+						$current_term = wp_get_post_terms(  get_the_ID() , 'projects-categories', array( 'parent' => 0 ) );
+						foreach ($current_term as $myterm); {
+							$current_term_slug = $myterm->slug;
+							$current_term_name = $myterm->name;
+							echo $current_term_name;
+						} 
+					?>
 				</div>	
 			</div>
-			
 		</div>
 	</a>
 </div>

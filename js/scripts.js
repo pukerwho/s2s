@@ -90,6 +90,17 @@ document.addEventListener('click', function(e){
   }
 });
 
+if (modalCloseBtns) {
+    for (modalCloseBtn of modalCloseBtns) {
+      modalCloseBtn.addEventListener('click', function(){
+        bgModal.classList.remove('open');
+        for (allModal of allModals) {
+          allModal.classList.remove('open');  
+        }
+      });
+    }
+  }
+
 //SWIPER
 var swiperMainWelcome = function() {
   var swiperWelcome = new Swiper('.swiper-welcome-container', {
@@ -174,18 +185,20 @@ swiperPortfolioObject();
 
 
 //Services Height
-for (servicesItem of servicesItems) {
-  if (servicesItem) {
-    let servicesItemFullWidth = servicesItem.offsetWidth;
-    servicesItemWidth = (servicesItemFullWidth/3) - 20;
-    servicesItem.style.height = servicesItemFullWidth + 'px';  
+if ($(document).width() > 767) {
+  for (servicesItem of servicesItems) {
+    if (servicesItem) {
+      let servicesItemFullWidth = servicesItem.offsetWidth;
+      servicesItemWidth = (servicesItemFullWidth/3) - 20;
+      servicesItem.style.height = servicesItemFullWidth + 'px';  
+    }
   }
 }
 
 //Успешно отправлена форма КОНТАКТЫ
 let contactSuccess = document.querySelector('.contact_success');
 const scriptURL = ''
-const contact_form = document.forms['contact']
+let contact_form = document.forms['contact']
 if (contact_form) {
   contact_form.addEventListener('submit', e => {
     e.preventDefault()

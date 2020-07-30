@@ -42,6 +42,14 @@
 	    						<div class="text-xl "><a href="skype:<?php echo carbon_get_theme_option('crb_contact_skype'); ?>?chat" class="font-bold"><?php echo carbon_get_theme_option('crb_contact_skype'); ?></a></div>
 	    					</div>
 	    				</div>
+	    				<div class="text-2xl text-yellow-800 mb-12">
+	    					<div>
+	    						<a href="<?php echo carbon_get_theme_option('crb_contact_address_link'); ?>" target="_blank"><?php _e('Наш адрес', 's2s'); ?></a>
+	    					</div>
+	    					<div>
+	    						<span class="modal_click_js cursor-pointer" data-modal-id="modal_order"><?php _e('Связаться с нами', 's2s'); ?></span>
+	    					</div>
+	    				</div>
 	    				<div class="social mb-10 lg:mb-0">
 	    					<div class="text-2xl mb-6">
 	    						<?php _e('Мы в социальных сетях', 's2s'); ?>:
@@ -86,13 +94,14 @@
             <?php _e('Оставить заявку', 's2s'); ?>
           </h3>
           <div class="flex flex-col lg:flex-row">
-            <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
-              <div>
-                <div>
-                  Форма
-                  <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
-                </div>
-              </div>
+            <div class="w-full">
+              <form name="contact">
+								<input type="text" name="Имя" placeholder="Ваше имя" class="w-full mb-4 p-3">
+								<input type="text" name="Телефон/Email" placeholder="Ваш номер телефона или email" class="w-full mb-4 p-3">
+								<div class="contact_success hidden text-white text-center bg-green-600 p-3 mb-4">Сообщение успешно отправлено</div>
+								<button type="submit" class="contact_send p-4">Отправить</button>
+							</form>
+              <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
             </div>
           </div>
         </div>

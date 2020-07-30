@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="post pt-20">
-		<div class="container mx-auto">
+		<div class="container mx-auto px-4 lg:px-0">
 			<div class="post_item border-b-2 border-gray-300 w-full lg:w-3/4 mx-auto pb-10">
 				<h1 class="post_item_title text-2xl lg:text-4xl font-bold mb-6">
 					<?php the_title(); ?>

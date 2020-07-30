@@ -7,6 +7,7 @@ add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
   Container::make( 'theme_options', __('Главные настройки') )
     ->add_tab( __('Контакты'), array(
+        Field::make( 'text', 'crb_contact_address_link', 'Ссылка на Google maps' ),
         Field::make( 'complex', 'crb_contact_phones', 'Телефоны' )
           ->add_fields( array(
             Field::make( 'text', 'crb_contact_phone', 'Номер' ),

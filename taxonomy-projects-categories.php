@@ -9,7 +9,7 @@
 ?>
 
 <div class="project-cat pt-20 pb-10">
-	<div class="container mx-auto">
+	<div class="container mx-auto px-4 lg:px-0">
 		<div class="mb-16">
 			<h1 class="text-5xl text-center uppercase"><?php echo $current_project_cat->name ?></h1>
 			<div class="line mx-auto"></div>

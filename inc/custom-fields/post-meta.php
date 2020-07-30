@@ -14,6 +14,7 @@ function crb_post_theme_options() {
 		  Field::make( 'text', 'crb_project_square', 'Площадь застройки' ),
 		  Field::make( 'text', 'crb_project_gabarit', 'Габариты' ),
 		  Field::make( 'text', 'crb_project_height', 'Высота' ),
+		  Field::make( 'text', 'crb_project_video_id', 'ID видео Youtube' ),
   ) );
   Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'services' )

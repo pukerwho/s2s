@@ -63905,7 +63905,7 @@ button[type="submit"] {
       transition: all 0.5s; }
       .mobile-menu.active {
         z-index: 9;
-        opacity: 0; }
+        opacity: 1; }
       .mobile-menu li {
         margin-bottom: 0.75rem; } }
 
@@ -63915,7 +63915,7 @@ button[type="submit"] {
   position: relative; }
   @media (max-width: 767px) {
     .thumb {
-      height: 100%; } }
+      height: 50vh; } }
   .thumb_title {
     position: absolute;
     bottom: 3rem;
@@ -63923,15 +63923,23 @@ button[type="submit"] {
     color: #222222;
     background-color: #f7c932;
     padding: 1.5rem 3rem; }
-    .thumb_title.s2s-animate {
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+    @media (max-width: 767px) {
+      .thumb_title {
+        padding: 1.5rem 1rem; } }
+    .thumb_title.animate-s2s {
+      -webkit-transform: translateX(-100px);
+      -ms-transform: translateX(-100px);
+      transform: translateX(-100px);
       opacity: 0;
       -webkit-transition: all 0.65s;
       -o-transition: all 0.65s;
       transition: all 0.65s; }
-      .thumb_title.s2s-animate.s2s-show {
+      @media (max-width: 767px) {
+        .thumb_title.animate-s2s {
+          -webkit-transform: translateX(-70px);
+          -ms-transform: translateX(-70px);
+          transform: translateX(-70px); } }
+      .thumb_title.animate-s2s.show-s2s {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         transform: translateX(0);
@@ -64484,8 +64492,14 @@ button[type="submit"] {
 
 .services_item {
   width: 33.3333%; }
+  @media (max-width: 767px) {
+    .services_item {
+      width: 100%; } }
   .services_item:nth-of-type(n+4) {
     width: 50%; }
+    @media (max-width: 767px) {
+      .services_item:nth-of-type(n+4) {
+        width: 100%; } }
   .services_item a {
     width: 100%;
     height: 100%;
@@ -64761,3 +64775,7 @@ button[type="submit"] {
   -ms-grid-rows: 400px 250px 250px 400px;
   grid-template-rows: 400px 250px 250px 400px;
   grid-template-areas: 'a b b' 'a c d' 'e c f' 'j j f'; }
+  @media (max-width: 767px) {
+    .archive .grid-container {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 255px; } }
