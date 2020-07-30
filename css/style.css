@@ -63988,14 +63988,6 @@ button[type="submit"] {
           margin-top: 1rem;
           padding: 0.75rem; } }
   .modal_block {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     background-color: #ffffff;
     background-size: 400%;
     background-position: 10%; }
@@ -64010,6 +64002,10 @@ button[type="submit"] {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         margin: 0;
         border-right: 0; } }
   .modal_bg {

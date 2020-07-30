@@ -111,7 +111,7 @@
 			<div class="modal_block rounded-lg shadow-lg">
 		    <div class="px-4 py-8 lg:px-12">
 		      <div class="flex flex-col lg:flex-row">
-		        <div class="w-full pr-0 lg:pr-10">
+		        <div class="w-full">
 		          <div>
 		            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php echo carbon_get_the_post_meta('crb_project_video_id'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 75vh;"></iframe>
 		          </div>
