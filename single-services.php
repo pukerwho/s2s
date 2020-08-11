@@ -22,17 +22,20 @@
 					<div class="service_album_title text-4xl uppercase font-bold mb-8">
 						<div><?php _e('Фотоальбом', 's2s'); ?>:</div>
 					</div>
-					<div class="service_album_thumb shadow-xl" data-modal="service-album-model">
+					<div class="service_album_thumb shadow-xl">
 						<?php 
 							$album_photos = carbon_get_the_post_meta('crb_services_album'); 
-							foreach (array_slice($album_photos, 0,1) as $album_photo):
+							foreach ($album_photos as $album_photo):
 						?>
 							<?php $album_photo_src = wp_get_attachment_image_src($album_photo, 'large'); ?>
-							<img src="<?php echo $album_photo_src[0]; ?>" loading="lazy" class="w-full ">
+							<a href="<?php echo $album_photo_src[0]; ?>" data-lightbox="service_album" data-title="Фотоальбом" class="service_album_thumb_link">
+								<img src="<?php echo $album_photo_src[0]; ?>" loading="lazy" class="service_album_thumb_img w-full">
+								<div class="service_album_thumb_btn main-bg text-xl text-center uppercase cursor-pointer py-4">
+									<?php _e('Открыть', 's2s'); ?>
+								</div>
+							</a>
 						<?php endforeach; ?>
-						<div class="main-bg text-xl text-center uppercase py-4">
-							Открыть
-						</div>
+						
 					</div>
 				</div>
 				<div class="service_sostav w-full lg:w-2/3 pl-0 lg:pl-10">
@@ -55,6 +58,28 @@
 				<img src="<?php bloginfo('template_url'); ?>/img/play.svg" alt="">
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="modal w-full lg:w-3/4" data-modal-id="service-album-model">
+	<div class="modal_block rounded-lg shadow-lg">
+    <div class="px-4 py-8 lg:px-12">
+      <div class="flex flex-row flex-wrap">
+        <?php 
+					$album_photos = carbon_get_the_post_meta('crb_services_album'); 
+					foreach ($album_photos as $album_photo):
+				?>
+					<?php $album_photo_src = wp_get_attachment_image_src($album_photo, 'large'); ?>
+					<div class="w-1/2 lg:w-1/4 h-48">
+						<a href="<?php echo $album_photo_src[0]; ?>" data-lightbox="service_album" data-title="Фотоальбом">
+							<img src="<?php echo $album_photo_src[0]; ?>" loading="lazy" class="w-full h-full object-cover">
+						</a>
+						
+					</div>
+				<?php endforeach; ?>
+        <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
+      </div>
+    </div>
 	</div>
 </div>
 

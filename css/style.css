@@ -64430,6 +64430,9 @@ button[type="submit"] {
     position: relative;
     left: 50px;
     transition: all 0.65s; }
+    @media (max-width: 767px) {
+      .contacts h2 span.animate-s2s {
+        left: -50px; } }
   .contacts h2 span.show-s2s {
     opacity: 1;
     left: 0; }
@@ -64444,6 +64447,9 @@ button[type="submit"] {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    @media (max-width: 767px) {
+      .contacts h2:before {
+        content: none; } }
 
 .portfolio_thumb {
   height: 35vh; }
@@ -64550,6 +64556,18 @@ button[type="submit"] {
     position: absolute;
     left: 0;
     top: 0.5rem; }
+
+.service_album_thumb_link .service_album_thumb_img {
+  display: none; }
+
+.service_album_thumb_link .service_album_thumb_btn {
+  display: none; }
+
+.service_album_thumb_link:nth-of-type(1) .service_album_thumb_img {
+  display: block; }
+
+.service_album_thumb_link:nth-of-type(1) .service_album_thumb_btn {
+  display: block; }
 
 .order {
   position: fixed;
