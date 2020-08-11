@@ -59,17 +59,6 @@ function estate_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// This is an example of how to include a plugin bundled with a theme.
-		array(
-			'name'               => 'Contact Form 7', // The plugin name.
-			'slug'               => 'contact-form-7', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/lib/plugins/contact-form-7.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			
-		),
-
 		array(
 			'name'               => 'Simple page ordering', // The plugin name.
 			'slug'               => 'simple-page-ordering', // The plugin slug (typically the folder name).

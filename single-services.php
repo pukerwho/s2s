@@ -61,28 +61,6 @@
 	</div>
 </div>
 
-<div class="modal w-full lg:w-3/4" data-modal-id="service-album-model">
-	<div class="modal_block rounded-lg shadow-lg">
-    <div class="px-4 py-8 lg:px-12">
-      <div class="flex flex-row flex-wrap">
-        <?php 
-					$album_photos = carbon_get_the_post_meta('crb_services_album'); 
-					foreach ($album_photos as $album_photo):
-				?>
-					<?php $album_photo_src = wp_get_attachment_image_src($album_photo, 'large'); ?>
-					<div class="w-1/2 lg:w-1/4 h-48">
-						<a href="<?php echo $album_photo_src[0]; ?>" data-lightbox="service_album" data-title="Фотоальбом">
-							<img src="<?php echo $album_photo_src[0]; ?>" loading="lazy" class="w-full h-full object-cover">
-						</a>
-						
-					</div>
-				<?php endforeach; ?>
-        <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
-      </div>
-    </div>
-	</div>
-</div>
-
 <?php endwhile; else: ?>
 	<p><?php _e('Ничего не найдено'); ?></p>
 <?php endif; ?>
